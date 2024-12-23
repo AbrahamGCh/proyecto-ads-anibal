@@ -1,0 +1,466 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+main {
+  padding: 2rem;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+main h1 {
+  color: #00695c;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.filters-container {
+  background: #b2dfdb; /* Un tono claro del turquesa */
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.filters-container .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.filters-container h2 {
+  color: #004d40; /* Más oscuro para contraste */
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.filters-container button {
+  background: #00695c;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  background: #00695c;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+  text-decoration: none; /* Para que los enlaces no tengan subrayado */
+}
+
+.btn:hover,
+.btn:focus {
+  background: #004d40;
+}
+
+.filters-container button:hover {
+  background: #004d40;
+}
+
+.filters {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #004d40;
+}
+
+.input-container input[type="text"],
+.input-container input[type="date"] {
+  padding: 0.5rem;
+  border: 1px solid #80cbc4;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #333;
+}
+
+.table-cotizaciones {
+  margin-top: 2rem;
+  overflow-x: auto;
+}
+
+.table-cotizaciones table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table-cotizaciones thead {
+  background: #00695c;
+  color: #fff;
+}
+
+.table-cotizaciones thead th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: normal;
+}
+
+.table-cotizaciones input[type="submit"] {
+  background: #00695c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.table-cotizaciones input[type="submit"]:hover {
+  background: #004d40; /* Más oscuro para hover */
+}
+
+.table-cotizaciones tbody td {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-cotizaciones tbody tr:hover {
+  background: #e0f2f1;
+}
+
+th.centered-colspan {
+  text-align: center !important;
+  vertical-align: middle;
+}
+
+.estado {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+/* Ejemplo de estados con diferente color, puedes ajustarlos */
+.estado.enviado {
+  color: #00695c;
+}
+.estado.procesado {
+  color: #009688;
+}
+.estado.cancelado {
+  color: #c62828;
+}
+
+.label-button {
+  display: inline-block;
+  background: #00695c;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.label-button:hover {
+  background: #004d40;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn.agregar {
+  background: #007bff;
+}
+
+.btn.editar {
+  background: #009688;
+}
+
+.btn.eliminar {
+  background: #b71331;
+}
+
+.btn.cancelar {
+  background: #e53935;
+}
+
+.btn.guardar {
+  background: #00897b;
+}
+
+button i {
+  margin-right: 8px;
+}
+
+.form-container {
+  background-color: #d4f5f2;
+  border: 2px solid #94d6d0;
+  border-radius: 8px;
+  padding: 20px;
+  width: 450px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.form-input label {
+  color: #004d40;
+  font-weight: bold;
+}
+
+.form-input input,
+.form-input select,
+.form-input textarea {
+  width: 65%;
+  padding: 8px;
+  border: 1px solid #94d6d0;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.form-input input:focus,
+.form-input select:focus {
+  outline: none;
+  border: 2px solid #00796b;
+}
+
+/* Botones */
+.form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 15px;
+}
+
+.modal {
+  top: 0;
+  left: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 8px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.warning-icon {
+  font-size: 50px;
+  color: #f8c01d;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btnMensaje {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+}
+
+.btn-no {
+  background-color: #e74c3c;
+}
+
+.btn-yes {
+  background-color: #27ae60;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+  }
+
+  .filters-container .flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filters-container h2,
+  .filters-container button {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.emitir-cotizacion {
+  background: #e0f2f1; /* Fondo claro */
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.emitir-cotizacion .input-container {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.emitir-cotizacion label {
+  font-weight: bold;
+  color: #004d40; /* Un tono más oscuro para buen contraste */
+  margin-bottom: 0.5rem;
+}
+
+.emitir-cotizacion input[type="text"],
+.emitir-cotizacion input[type="date"] {
+  padding: 0.5rem;
+  border: 1px solid #80cbc4;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #333;
+  font-size: 1rem;
+}
+
+.emitir-cotizacion input[type="radio"] {
+  margin-right: 0.3rem;
+}
+
+.emitir-cotizacion .input-container span {
+  font-weight: bold;
+  color: #004d40;
+  margin-bottom: 0.5rem;
+}
+
+/* Ajuste para radio buttons */
+.emitir-cotizacion .input-container > label {
+  font-weight: normal;
+  color: #333;
+}
+
+/* Ajustar labels radio cuando van uno al lado del otro */
+.emitir-cotizacion .input-container > label > input {
+  vertical-align: middle;
+}
+
+.table-cotizaciones {
+  border: 1px solid #ddd;
+  max-height: 250px;
+  overflow-x: auto;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .emitir-cotizacion {
+    padding: 1rem;
+  }
+  .emitir-cotizacion .input-container {
+    margin-bottom: 1rem;
+  }
+}
+
+.table-facturas {
+  margin-top: 2rem;
+  overflow-x: auto;
+}
+
+.table-facturas table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table-facturas thead {
+  background: #00695c; /* Verde oscuro */
+  color: #fff;
+}
+
+.table-facturas thead th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: normal;
+}
+
+.table-facturas tbody td {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+}
+
+.table-facturas tbody tr:hover {
+  background: #e0f2f1; /* Fondo claro para hover */
+}
+
+.table-facturas tbody tr:last-child td {
+  border-bottom: none; /* Quitar línea inferior en la última fila */
+}
+
+.table-facturas input[type="submit"] {
+  background: #00695c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.table-facturas input[type="submit"]:hover {
+  background: #004d40; /* Más oscuro para hover */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .table-facturas table {
+    font-size: 0.9rem;
+  }
+
+  .table-facturas thead th,
+  .table-facturas tbody td {
+    padding: 0.5rem;
+  }
+}

@@ -1,0 +1,7 @@
+tasks:
+  - before: docker compose up --build
+  - before: docker compose run php composer update
+
+vscode:
+  extensions:
+    - "bmewburn.vscode-intelephense-client"
